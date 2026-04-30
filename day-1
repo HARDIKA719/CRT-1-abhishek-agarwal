@@ -113,3 +113,46 @@ int main(){
     cout<<"access granted"<<isgranted<<endl;
     cout<<"access denied"<<!isgranted<<endl;
 }
+
+//alphabet case checker
+#include<iostream>
+using namespace std; 
+int main(){
+    char alphabet;
+    cout<<"enter a character";
+    cin>>alphabet;
+    if(alphabet >= 'A' && alphabet <= 'Z'){
+        cout<<"uppercase"<<endl;
+    }
+    else if(alphabet >= 'a' && alphabet <= 'z'){
+        cout<<"lowercase"<<endl;
+    }
+    else{
+        cout<<"non-alphabatic"<<endl;
+    }
+    return 0;
+}
+
+//age group classifier
+#include<iostream>
+using namespace std;
+int main(){
+    int age;
+    cout<<"enter age";
+    cin>>age;
+    if(age>=0&&age<=14)
+    {
+        cout<<"children"<<endl;
+        
+    }
+    else if(age>=15&&age<=24){
+        cout<<"youth"<<endl;
+        
+    }
+    else if(age>=25&&age<=64){
+        cout<<"adult";
+    }
+    else{
+        cout<<"senior citizen"<<endl;
+    }
+}
