@@ -1,3 +1,6 @@
+//Temperature conversion
+//take input in the form of celcius and convert it into fahrenheit
+
 #include<iostream>
 using namespace std;
 int main(){
@@ -6,4 +9,44 @@ int main(){
     fahrenheit=(celcius*9.0/5.0)+32.0;
     cout<<fahrenheit<<endl;
     return 0;
+}
+
+//global and local variable
+#include<iostream>
+using namespace std;
+int globalvariable=100;
+int main(){
+int userinput;
+float result;
+cin>>userinput;
+result=(double)globalvariable/userinput;
+cout<<result<<endl;
+return 0;
+}
+
+//logical and relational operator
+#include<iostream>
+using namespace std;
+int main(){
+    int side1,side2,side3;
+    cin>>side1>>side2>>side3;
+    bool isequi=(side1>0)&&(side1==side2)&&(side2==side3);
+    cout<<isequi<<endl;
+    return 0;
+}
+
+//swap value of 2 variablea using 3rd variable
+#include<iostream>
+using namespace std;
+int main(){
+    int a;
+    int b;
+    cin>>a>>b;
+    //swaping logic-create a temporary variable 
+    int temp=a;
+    a=b;
+    b=temp;
+    cout<<a<<"\n"<<b<<endl;
+    return 0;
+    
 }
