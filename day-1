@@ -1,4 +1,4 @@
-//Temperature conversion
+//Temperature conversion(1)
 //take input in the form of celcius and convert it into fahrenheit
 
 #include<iostream>
@@ -11,7 +11,7 @@ int main(){
     return 0;
 }
 
-//global and local variable
+//global and local variable(2)
 #include<iostream>
 using namespace std;
 int globalvariable=100;
@@ -24,7 +24,7 @@ cout<<result<<endl;
 return 0;
 }
 
-//logical and relational operator
+//logical and relational operator(3)
 #include<iostream>
 using namespace std;
 int main(){
@@ -35,7 +35,7 @@ int main(){
     return 0;
 }
 
-//swap value of 2 variablea using 3rd variable
+//swap value of 2 variablea using 3rd variable(4)
 #include<iostream>
 using namespace std;
 int main(){
@@ -51,7 +51,7 @@ int main(){
     
 }
 
-//area of shapes
+//area of shapes(5)
 //1-->circle
 //2-->rectangle
 //3-->triangle
@@ -79,4 +79,37 @@ int main(){
         cout<<"invalid choice"<<endl;
     }
     return 0;
+}
+
+
+//sum and average of 3 numbers(6)
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cin>>a>>b>>c;
+    int total;
+    total=a+b+c;
+    cout<<"total:"<<total<<endl;
+   float avg;
+    avg=(a+b+c)/3.0;
+    cout<<"average:"<<avg<<endl;
+    return 0;
+}
+
+//login credential program(7)
+#include<iostream>
+using namespace std;
+int main(){
+    //const keeps the value of a variable constant
+    const int userId=1234;
+    const int password=0000;
+    int inputId,inputpassword;
+    cout<<"enter your id here";
+    cin>>inputId;
+    cout<<"enter your password here";
+    cin>>inputpassword;
+    bool isgranted=(userId==inputId)&&(password==inputpassword);
+    cout<<"access granted"<<isgranted<<endl;
+    cout<<"access denied"<<!isgranted<<endl;
 }
