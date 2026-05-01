@@ -114,7 +114,7 @@ int main(){
     cout<<"access denied"<<!isgranted<<endl;
 }
 
-//alphabet case checker
+//alphabet case checker(8)
 #include<iostream>
 using namespace std; 
 int main(){
@@ -133,7 +133,7 @@ int main(){
     return 0;
 }
 
-//age group classifier
+//age group classifier(9)
 #include<iostream>
 using namespace std;
 int main(){
