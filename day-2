@@ -74,3 +74,51 @@ int main(){
     return 0;
 }
 
+//break statement(14)
+#include<iostream>
+using namespace std;
+int main(){
+int n;
+int sum=0;
+while(true){
+    cin>>n;
+    if(n<0){
+        break;
+    }
+sum=sum+n;
+}
+    cout<<sum;
+    return 0;
+}
+
+
+
+//problem statement-->smart home lighting system
+
+#include<iostream>
+using namespace std;
+int main(){
+    string dayorNight;
+    bool motionDetected;
+    
+    cout<<"is it day or Night? :";
+    cin>>dayorNight;
+    cout<<"is motion detected?: (1 for yes,0 for no)";
+    cin>>motionDetected;
+    
+    if(dayorNight=="Night"||dayorNight=="night"){
+        if(motionDetected){
+            cout<<"Turn on the light with 100% brightness";
+        }
+        else{
+            cout<<"Turn on the light with 10% brightness";
+        }
+    }
+        else{
+            cout<<"Turn off the light";
+        }
+    
+    return 0;
+  
+    
+}
