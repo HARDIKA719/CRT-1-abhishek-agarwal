@@ -1,0 +1,30 @@
+//if-condition(9)
+//verify user's age is eligilble for vote or not
+#include<iostream>
+using namespace std;
+int main(){
+    int age;
+    cin>>age;
+    if(age>=18){
+        cout<<"eligible for vote"<<endl;
+        
+    }
+    return 0;
+}
+
+//if-else-condition(10)
+//verify user's age is eligilble for vote or not
+#include<iostream>
+using namespace std;
+int main(){
+    int age;
+    cin>>age;
+    if(age>=18){
+        cout<<"eligible for vote"<<endl;
+        
+    }
+    else{
+        cout<<"not eligible for vote"<<endl;
+    }
+    return 0;
+}
