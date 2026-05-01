@@ -156,3 +156,5 @@ int main(){
         cout<<"senior citizen"<<endl;
     }
 }
+
+
