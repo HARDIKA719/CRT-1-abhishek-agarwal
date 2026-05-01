@@ -1,4 +1,4 @@
-//if-condition(9)
+//if-condition(10)
 //verify user's age is eligilble for vote or not
 #include<iostream>
 using namespace std;
@@ -12,7 +12,7 @@ int main(){
     return 0;
 }
 
-//if-else-condition(10)
+//if-else-condition(11)
 //verify user's age is eligilble for vote or not
 #include<iostream>
 using namespace std;
@@ -29,7 +29,7 @@ int main(){
     return 0;
 }
 
-//nested if else condition(11)
+//nested if else condition(12)
 //verify user's age is eligilble for vote or not
 #include<iostream>
 using namespace std;
@@ -53,6 +53,24 @@ int main(){
             cout<<"not eligible for vote";
         }
     }
+    return 0;
+}
+
+//continue statement(13)
+//print 1 to N and avoid those number which are divisble by 3 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if(i%3==0){
+            continue;
+        }
+        cout<<i<<"";
+        
+    }
+    cout<<"\n";
     return 0;
 }
 
