@@ -67,3 +67,66 @@ int main(){
     }
     return 0;
 }
+
+
+//problem 5 
+//print recantagle in star pattern
+#include<iostream>
+using namespace std;
+int main(){
+    int row;
+    cout<<"enter rows"<<" ";
+    cin>>row;
+    int col;
+    cout<<"enter column"<<" ";
+    cin>>col;
+    for(int i=1;i<=row;i++){
+        for(int j=1;j<=col;j++){
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+//problem 6 
+//hollow square
+#include<iostream>
+using namespace std;
+int main(){
+  
+    for(int i=1;i<=5;i++){
+        for(int j=1;j<=5;j++){
+            cout<<" ";
+            if(i==1||j==1||i==5||j==5){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+      
+        }
+            cout<<"\n";
+    }
+}
+
+
+//problem-7
+//triangle star pattern
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int j=n-i;j>=1;j--){
+            cout<<" ";
+        }
+        for(int k=0;k<=i-1;k++){
+            cout<<" "<<"w*";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+    
