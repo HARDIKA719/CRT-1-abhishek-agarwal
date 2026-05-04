@@ -28,3 +28,42 @@ int main(){
     }
     return 0;
 }
+
+
+//problem-3
+//print right angle triangle (star pattern)
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    //defines me the number of times i want to print the pattern
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+            cout<<"*";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+
+//problem-4
+//print mirror of right angle triangle (star pattern)
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    //defines me the number of times i want to print the pattern
+    for(int i=1;i<=n;i++){ //no of rows
+        for(int j=n-i;j>=1;j--){ //no of spaces
+            cout<<" ";
+        }
+        for(int k=1;k<=i;k++){
+        cout<<"*"; //no of stars which is dependent on no of rows 
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
