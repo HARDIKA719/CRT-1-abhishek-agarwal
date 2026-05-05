@@ -141,10 +141,9 @@
 //      return 0;
 // }
 
-// ==============================================
 // 💎 PROBLEM 09: PRIME NUMBER CHECKER 🔢
 // 📝 Task: Verify if a number has only two divisors
-// ==============================================
+
 
 // #include <iostream>
 // using namespace std;
@@ -172,10 +171,10 @@
 //      return 0;
 // }
 
-// ==============================================
+
 // 💎 PROBLEM 10: SMARTPHONE UNLOCK 🔓
 // 📝 Task: Force correct PIN entry to continue
-// ==============================================
+
 
 // #include <iostream>
 // using namespace std;
@@ -191,10 +190,10 @@
 //      return 0;
 // }
 
-// ==============================================
+
 // 💎 PROBLEM 11: WATER JAR FILLER 🫙
 // 📝 Task: Keep adding water until 500ml is reached
-// ==============================================
+
 
 #include <iostream>
 using namespace std;
