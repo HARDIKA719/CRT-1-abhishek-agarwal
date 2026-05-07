@@ -1,0 +1,155 @@
+//problem--1
+//Access Specifier
+//1.1--public
+#include<iostream>
+using namespace std;
+
+    class Bankaccount{
+        private:
+        int balance=5000;
+     public:
+        void showBalance(){
+            cout<<"Balance in your account is:"<<balance;
+        }
+    };
+    int main(){
+        Bankaccount myaccount;
+        myaccount.showBalance();
+    }
+
+//1.2--protected
+#include<iostream>
+using namespace std;
+class parent{
+   protected:
+    int secretCode=1234;
+};
+class child:public parent{
+    public:
+    void accessOfSecretCode(){
+        cout<<" secret Code of the locker is "<<secretCode;
+    }
+};
+int main(){
+    child obj1;
+    obj1.accessOfSecretCode();
+}
+
+
+// //2..1--default constructor
+#include<iostream>
+using namespace std;
+class wifiConnection {
+public:
+    string networkName;
+    string password;
+    
+    
+    wifiConnection() {
+        networkName="ACTfibre";
+        password="BJP";
+    }
+    
+public:
+void showDetails(){
+    cout<<"Network Name is "<< networkName <<"and its password is "<<password;
+ }
+};
+
+int main(){
+    wifiConnection obj1;
+    obj1.showDetails();
+}
+
+
+
+//problem-2
+//constructor
+//type---2.1--default
+//       2.2--parameter
+//       2.3--copy
+
+
+// //2..1--default constructor
+#include<iostream>
+using namespace std;
+class wifiConnection {
+public:
+    string networkName;
+    string password;
+    
+    
+    wifiConnection() {
+        networkName="ACTfibre";
+        password="BJP";
+    }
+    
+public:
+void showDetails(){
+    cout<<"Network Name is "<< networkName <<"and its password is "<<password;
+ }
+};
+
+int main(){
+    wifiConnection obj1;
+    obj1.showDetails();
+}
+
+
+//2.2--parameter constructor
+
+#include<iostream>
+using namespace std;
+class student{
+    public:
+  string name;
+    int id;
+    
+//constructor
+student( string studentname,int studentid){
+    name=studentname;
+    id=studentid;
+}
+public:
+void displaydetails(){
+    cout<<name<<" "<<id;
+}
+};
+int main(){
+    student std1("hardika",101);
+    std1.displaydetails();
+}
+
+//problem-3
+//pillar of oops
+//encapsulation--- it means binding a data into a single unit(functions,data,variable)
+//into a single unit called class and making some restrictions on this class members
+//importance---> data security 
+//               controlled access over my data 
+//               validation before accessing the data
+//               code  maintability
+//getter is used to get the value and setter is used to set the value
+#include<iostream>
+using namespace std;
+
+class bankAccount{
+    private:
+    int balance;
+ public:   
+void setbalance(int amount){
+   if(amount>=0){
+       balance=amount;
+   }else{
+       cout<<"enter a valid number...";
+   }
+}
+public:
+int getbalance(){
+    return balance;
+ }
+};
+int main(){
+    bankAccount obj1;
+    obj1.setbalance(6000);
+    cout<<obj1.getbalance();
+}
