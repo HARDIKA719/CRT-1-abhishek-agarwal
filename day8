@@ -1,0 +1,151 @@
+//problem--1
+//inheritance
+//type 1--->single
+#include<iostream>
+using namespace std;
+
+class vehicle{
+    public:
+    void start(){
+        cout<<"vehicle starts"<<"\n";
+    }
+};
+class car:public vehicle{
+    public:
+      void drive(){
+          cout<<"car is running"<<"\n";
+      }
+};
+int main(){
+    car c;
+    c.start();
+    c.drive();
+}
+
+//1.2--->multilevel
+#include<iostream>
+using namespace std;
+class vehicle{
+    public:
+    void start(){
+        cout<<"vehicle starts"<<"\n";
+    }
+};
+class car:public vehicle{
+    public:
+      void drive(){
+          cout<<"car is running"<<"\n";
+      }
+};
+class speedometer:public car{
+    public:
+    void speed(){
+        cout<<"car is running with normal speed"<<"\n";
+    }
+};
+int main(){
+    speedometer s;
+    s.speed();
+    s.drive();
+    s.start();
+}
+
+//1.3--->hierachial
+
+#include<iostream>
+using namespace std;
+class vehicle{
+    public:
+    void start(){
+        cout<<"vehicle starts"<<"\n";
+    }
+};
+class car:public vehicle{
+    public:
+      void drive(){
+          cout<<"car is running"<<"\n";
+      }
+};
+class bike:public vehicle{
+    public:
+    void move(){
+        cout<<"bike is moving"<<"\n";
+    }
+};
+int main(){
+    bike obj1;
+    obj1.move();     
+    obj1.start();    
+
+    car obj2;
+    obj2.drive();    
+    obj2.start();   
+
+}
+
+// 1.4--->multiple 
+#include<iostream>
+using namespace std;
+
+class parent1{
+public:
+    void givemoney(){
+        cout<<"mummy paise do"<<"\n";
+    }
+};
+
+class parent2{
+public:
+    void givemoney(){
+        cout<<"papa paise do";
+    }
+};
+
+class child : public parent1, public parent2{
+};
+
+int main(){
+    child obj1;
+
+    obj1.parent1::givemoney();
+    obj1.parent2::givemoney();
+
+    return 0;
+}
+
+//diamond problem is type of  hybrid inheritance and solved by virtual base class
+
+//1.5--->hybrid inheritance
+#include<iostream>
+using namespace std;
+class A{
+    public:
+      void print(){
+          cout<<"BJP wons";
+      }
+};
+class B: public A{
+    //no logic
+};
+class C: public A{
+    //no  logic
+};
+class D:public B,public C{
+    //no logic
+};
+int main(){
+    D obj1;
+    obj1.B::print();
+}
+
+
+
+
+
+
+
+
+
+
+
+
