@@ -16,3 +16,102 @@ int main(){
     printNumbers(1);
 }
 
+//program--2
+//recursion
+//factorial of 5
+#include<iostream>
+using namespace std;
+int factorial(int nums){
+    if(nums==0||nums==1){
+        return 1;
+    }   
+    return nums*factorial(nums-1);
+    
+}
+
+int main(){
+    cout<<factorial(5);
+}
+
+
+//program--3
+//fibonacci series
+#include<iostream>
+using namespace std;
+
+int fibonacci(int n){
+    if(n==0){
+        return 0;
+    }
+    else if(n==1){
+        return 1;
+    }
+    else{
+       return fibonacci(n-1)+fibonacci(n-2);
+}
+    }
+
+int main(){
+  
+   cout<<fibonacci(5);
+}
+
+
+//program--4
+//climbing stairs
+class Solution {
+public:
+    int climbStairs(int n) {
+        if (n == 1) {
+            return 1;
+        }
+        
+        if (n == 2) {
+            return 2;
+        }
+
+        return climbStairs(n - 1) + climbStairs(n - 2);
+    }
+};
+
+
+//program--5
+//binary string
+#include<iostream>
+using namespace std;
+int binary(int n){
+    if(n==0){
+        return 0;
+    }
+    if(n==1){
+        return 1;
+    }
+    
+    
+        return binary(n-1)+binary(n-2);
+    
+}
+int main(){
+    cout<<binary(2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
