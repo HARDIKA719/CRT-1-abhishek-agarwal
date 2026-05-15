@@ -27,3 +27,85 @@ int main(){
 }    
     return 0;
 }
+
+//problem--2
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        int n=s.size();
+        int start=0;
+        int end=n-1;
+
+        // while(start<end){
+        //     char c=s[start];
+        //     s[start]=s[end];
+        //     s[end]=c;
+
+        //     start++;
+        //     end--;
+        // }
+        stack<int>st;
+        for(int i=0;i<n;i++){
+       st.push(s[i]);
+    }
+    for(int i=0;i<n;i++){
+         s[i]=st.top();
+         st.pop();
+     }
+ cout<<"reverse array.."<<"\n";
+    
+     for(int i=0;i<n;i++){
+     cout<<s[i]<<" ";
+ }      
+ }
+};
+
+//problem--3
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<int>st;
+
+        for(char c:s){
+            if(c=='(')
+                st.push(')');
+            else if(c=='{')
+            st.push('}');
+            else if(c=='[')
+            st.push(']');
+            else{
+                if(st.empty()||st.top()!=c){
+                    return false;
+
+                }st.pop();
+            }
+        }
+        return st.empty();
+    }
+
+};
+
+//problem--5
+//stack
+class Solution {
+  public:
+    vector<int> nextLargerElement(vector<int>& arr) {
+        // code here
+        int n=arr.size();
+        stack<int>st;
+        vector<int>nge(n);
+        
+        for(int i=n-1; i>=0;i--){
+            while(!st.empty() && st.top()<=arr[i]){
+                st.pop();
+            }
+            if(st.empty()){
+                nge[i]=-1;
+            }else{
+                nge[i]=st.top();
+            }
+            st.push(arr[i]);
+        }
+        return nge;
+    }
+};
