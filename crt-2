@@ -306,3 +306,94 @@ using namespace std;
 //     }
 //     return 0;
 // }
+
+
+
+
+
+
+// //2--pointers
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     vector<int> arr={1,2,4,6,8,10};
+//     int target=10;
+    
+//     int left=0;
+//     int right=arr.size()-1;
+    
+//     while(left<right){
+//         int sum= arr[left]+arr[right];
+        
+//         if(sum==target){
+//             cout<<arr[left]<<" "<<arr[right];
+//             break;
+//         }
+//         else if(sum<target){
+//             left++;
+//         }
+//         else {
+//             right--;
+//         }
+        
+//     }
+//     return 0;
+// }
+
+// //nearest greatest to right 
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     int a[]={2,3,1,4,7,3,1};
+//     int n=7;
+//     stack<int> st;
+//     vector<int> ngr;
+//     for(int i=n-1;i>=0;i--){
+//         while(!st.empty() and a[i]>=st.top()){
+//             st.pop();
+//         }
+//         if(st.empty()){
+//             ngr.push_back(-1);
+//             st.push(a[i]);
+//         }
+//         else if(a[i]<st.top()){
+//             ngr.push_back(st.top());
+//             st.push(a[i]);
+//         }
+//     }
+//     reverse(ngr.begin(),ngr.end());
+//     for(auto i:ngr) cout<<i<<" ";
+// }
+
+
+
+
+
+
+//nearest greatest to left
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int a[]={2,3,1,4,7,3,1};
+    int n=7;
+    stack<int> st;
+    vector<int> ngr;
+    for(int i=0;i<n;i++){
+        while(!st.empty() and a[i]>=st.top()){
+            st.pop();
+        }
+        if(st.empty()){
+            ngr.push_back(-1);
+            st.push(a[i]);
+        }
+        else if(a[i]<st.top()){
+            ngr.push_back(st.top());
+            st.push(a[i]);
+        }
+    }
+    reverse(ngr.begin(),ngr.end());
+    for(auto i:ngr) cout<<i<<" ";
+}
